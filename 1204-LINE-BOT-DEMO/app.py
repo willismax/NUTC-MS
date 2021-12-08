@@ -19,6 +19,9 @@ from config import *
 line_bot_api = LineBotApi(CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(CHANNEL_SERET)
 
+@app.route("/")
+def home():
+    return "TEST 200"
 
 @app.route("/callback", methods=['POST'])
 def callback():

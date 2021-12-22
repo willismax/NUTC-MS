@@ -1,7 +1,15 @@
 
 # 電腦視覺DEMO
 
-## OpenCV + Mediapipe
+
+:::info
+專案已在github，執行以下程式碼clone專案。
+```
+git clone https://github.com/willismax/NUTC-MS.git
+```
+:::
+
+## OpenCV + MediaPipe
 - 建議使用pipenv虛擬環境，本案例採python 3.8，相依外部套件可透過`pipenv sync`將`Pipfile.lock`內鎖定的相依套件進行安裝。
 
     ```
@@ -25,6 +33,10 @@
     python app-holistic.py  #肢體辨識
     python app-pose.py  #姿態辨識
     ```
+    ![](https://i.imgur.com/UfgntOC.png)
 
 
-- 參考[【python】OpenCV + MediaPipe 手部追蹤 ｜ MediaPipe 教學 ｜ 影像辨識 ｜ 電腦視覺 ｜ AI 人工智慧](https://www.youtube.com/watch?v=x4eeX7WJIuA)
+
+## 參考:
+- https://google.github.io/mediapipe/
+- [【python】OpenCV + MediaPipe 手部追蹤 ｜ MediaPipe 教學 ｜ 影像辨識 ｜ 電腦視覺 ｜ AI 人工智慧](https://www.youtube.com/watch?v=x4eeX7WJIuA)

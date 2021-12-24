@@ -68,9 +68,14 @@
     python app.py 
     ```
 - 執行後可以觀察的網址
-    - http://localhost:5000
-    - http://localhost:5000/api/all
-    - http://localhost:5000/api/美國
-    - http://localhost:5000/api/尚氣與十環傳奇
+    - v1
+        - http://localhost:5000
+        - http://localhost:5000/api/all
+        - http://localhost:5000/api/美國
+        - http://localhost:5000/api/尚氣與十環傳奇
+    - v2
+        - http://localhost:5000/api/v2/GET/all
+        - http://localhost:5000/api/v2/GET/country/美國
+        - http://localhost:5000/api/v2/GET/movie/期末考
 
 

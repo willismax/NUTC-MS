@@ -32,22 +32,40 @@ data = load_json_data()
 def index():
     return '<h1>電影票房API</h1>'
 
-@app.route('/api/all')
+@app.route('/api/')
 def all():
+    """取得全部影片"""
     return jsonify(data)
 
-
 @app.route('/api/<search_key>')
-def country(search_key):
+def search_key(search_key):
+    """取得對應資訊
+    :parm: str: "美國"、"期末考"
+    """
     data = load_json_data()
     data = [ i for i in data['list'] for k,v in i.items() if v == search_key ]
     return jsonify(data)
 
-# @app.route('/api/<name>')
-# def country(name):
-#     data = load_json_data()
-#     data = [ i for i in data['list'] for k,v in i.items() if v == country ]
-#     return jsonify(data)
+# 第2版API
+@app.route('/api/v2/GET/all')
+def all_v2():
+    """取得全部影片"""
+    return jsonify(data)
+
+@app.route('/api/v2/GET/country/<search_key>')
+def country(search_key):
+    """取得對應國家的票房資訊"""
+    data = load_json_data()
+    data = [ i for i in data['list'] for k,v in i.items() if v == search_key ]
+    return jsonify(data)
+
+@app.route('/api/v2/GET/movie/<search_key>')
+def movie(search_key):
+    """取得對應電影名稱的票房資訊"""
+    data = load_json_data()
+    data = [ i for i in data['list'] for k,v in i.items() if v == search_key ]
+    return jsonify(data)
+
 
 
 if __name__ == '__main__':

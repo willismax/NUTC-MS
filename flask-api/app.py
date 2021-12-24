@@ -67,7 +67,6 @@ def movie(search_key):
     return jsonify(data)
 
 
-
 if __name__ == '__main__':
     app.debug = True
     app.run()

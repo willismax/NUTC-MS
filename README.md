@@ -67,7 +67,7 @@
     #執行程式
     python app.py 
     ```
-- 執行後可以觀察的網址
+- 執行`app.py`後可以觀察的網址
     - v1
         - http://localhost:5000
         - http://localhost:5000/api/all
@@ -78,4 +78,10 @@
         - http://localhost:5000/api/v2/GET/country/美國
         - http://localhost:5000/api/v2/GET/movie/期末考
 
-
+- 執行`bike.py`後可以觀察的網址
+    - 請觀察Http Response Headers
+        - http://localhost:5000
+        - http://localhost:5000/df
+        - http://localhost:5000/df2json
+        - http://localhost:5000/json
+        - http://localhost:5000/jsonify

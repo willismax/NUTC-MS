@@ -5,7 +5,6 @@ import json
 
 app = Flask(__name__)
 
-
 def get_cinema_income():
     url = 'https://boxoffice.tfi.org.tw/api/export?start=2021/12/06&end=2021/12/12'
     res = requests.get(url)

@@ -12,7 +12,7 @@
     pipenv --python 3.9.9
     ```
 
-- 安裝相依套件
+- 安裝相依套件﹑YES!!
 
     ```
     pipenv install -r requirements.txt

@@ -28,9 +28,12 @@ def load_json_data():
 data = load_json_data()
 
 
+
+
 @app.route('/')
 def index():
     return '<h1>電影票房API</h1>'
+
 
 @app.route('/api/')
 def all():
@@ -42,8 +45,11 @@ def search_key(search_key):
     """取得對應資訊
     :parm: str: "美國"、"期末考"
     """
-    data = load_json_data()
-    data = [ i for i in data['list'] for k,v in i.items() if v == search_key ]
+    try:
+        data = load_json_data()
+        data = [ i for i in data['list'] for k,v in i.items() if v == search_key ]
+    except:
+        data = {'error':'搜尋條件錯誤'}
     return jsonify(data)
 
 # 第2版API
@@ -65,8 +71,6 @@ def movie(search_key):
     data = load_json_data()
     data = [ i for i in data['list'] for k,v in i.items() if v == search_key ]
     return jsonify(data)
-
-
 if __name__ == '__main__':
     app.debug = True
     app.run()
